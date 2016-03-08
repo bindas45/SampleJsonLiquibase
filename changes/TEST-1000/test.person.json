@@ -1,0 +1,54 @@
+{
+    "databaseChangeLog": 
+    [
+        {
+            "changeSet": 
+            {
+                "id": "TEST-1000",
+                "author": "james.lockhart",
+                "changes": 
+                [
+                    {
+                        "createTable": 
+                        {
+                            "tableName": "person",
+                            "catalogName": "test",
+                            "columns": [
+                                {
+                                    "column": {
+                                        "name": "id",
+                                        "type": "int",
+                                        "autoIncrement": true,
+                                        "constraints": {
+                                            "primaryKey": true,
+                                            "nullable": false
+                                        },
+                                    }
+                                },
+                                {
+                                    "column": {
+                                        "name": "firstname",
+                                        "type": "varchar(63)"
+                                    }
+                                }
+                            ]
+                        },
+                        "tagDatabase": {
+                           "tag": "TEST-1000"
+                        }
+                    }
+                ],
+                "rollback": 
+                [
+                    {
+                        "dropTable":
+                        {
+                            "tableName": "person",
+                            "catalogName": "test"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

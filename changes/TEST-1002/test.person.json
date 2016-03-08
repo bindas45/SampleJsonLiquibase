@@ -1,0 +1,62 @@
+{
+    "databaseChangeLog": 
+    [
+        {
+            "changeSet": 
+            {
+                "id": "TEST-1002",
+                "author": "james.lockhart",
+                "changes": 
+                [
+                    {
+                        "loadData": 
+                        {
+                            "tableName": "person",
+                            "catalogName": "test",
+                            "columns": 
+                            [
+                                {
+                                    "column": 
+                                    {
+                                        "name": "id"
+                                    }
+                                },
+                                {
+                                    "column": 
+                                    {
+                                        "name": "firstname"
+                                    }
+                                },
+                                {
+                                    "column": 
+                                    {
+                                        "name": "lastname"
+                                    }
+                                }
+                            ],
+                            "encoding": "UTF-8",
+                            "file": "changes/TEST-1002/test.person.csv",
+                            "quotchar": "\"",
+                            "separator": ","
+                        },
+                        "tagDatabase": 
+                        {
+                           "tag": "TEST-1002"
+                        }
+                    }
+                ],
+                "rollback": 
+                [
+                    {
+                        "delete":
+                        {
+                            "tableName": "person",
+                            "catalogName": "test",
+                            "where": "1=1"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

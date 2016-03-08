@@ -1,0 +1,19 @@
+{
+    "databaseChangeLog": [
+        {
+            "preConditions": [
+                {
+                    "runningAs": {
+                        "username": "root"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "include": {
+                "file": "changes/TEST-1000/test.person.json"
+            }
+        }
+    ]
+}

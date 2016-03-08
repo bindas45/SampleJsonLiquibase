@@ -1,0 +1,45 @@
+{
+    "databaseChangeLog": 
+    [
+        {
+            "changeSet": 
+            {
+                "id": "TEST-1001",
+                "author": "james.lockhart",
+                "changes": 
+                [
+                    {
+                        "addColumn": 
+                        {
+                            "tableName": "person",
+                            "catalogName": "test",
+                            "columns": 
+                            [
+                                {
+                                    "column": {
+                                        "name": "lastname",
+                                        "type": "varchar(63)"
+                                    }
+                                }
+                            ]
+                        },
+                        "tagDatabase": {
+                           "tag": "TEST-1001"
+                        }
+                    }
+                ],
+                "rollback": 
+                [
+                    {
+                        "dropColumn":
+                        {
+                            "tableName": "person",
+                            "columnName": "lastname",
+                            "catalogName": "test"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
