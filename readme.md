@@ -20,7 +20,7 @@ cd SampleJsonLiquibase
 
 #### Configuration
 
-You will need to either set-up a database server locally or have a remote database access available. This example is assuming that your dbms is MySQL with the username 'admin' and password 'password' and you will have to adjust the liquibase.properties to reflect your set-up. If you require any additional drivers I would suggest [oracle-jdbc](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).
+You will need to either set-up a database server locally or have a remote database access available. This example is assuming that you're dbms is MySQL with the username 'admin' and password 'password' and you will have to adjust the liquibase.properties to reflect your set-up. If you require any additional drivers I would suggest [oracle-jdbc](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html).
 
 #### Initial Tag
 
